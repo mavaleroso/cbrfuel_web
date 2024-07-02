@@ -1,35 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { Button } from "@radix-ui/themes";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="bg-black">
       <header className="bg-black relative h-screen container mx-auto px-6">
         <nav className="mx-auto flex max-w-7xl items-center justify-between py-6 relative z-10" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -143,7 +123,7 @@ export default function Example() {
           </div>
         </div>
       </header>
-      <section className="relative">
+      <section className="relative bg-white">
         <div className="py-24 sm:py-32 ">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
@@ -229,7 +209,13 @@ export default function Example() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group flex flex-col h-full bg-white shadow-sm rounded-xl">
               <div className="h-52 flex flex-col justify-center items-center bg-primary rounded-t-xl">
-                <Image src="/images/engine_oil.png" alt="Engine Oils" width={300} height={300} />
+                <Image
+                  className="h-auto w-auto"
+                  src="/images/engine_oil.png"
+                  alt="Engine Oils"
+                  width={300}
+                  height={300}
+                />
               </div>
               <div className="p-4 md:p-6 ">
                 <span className="block mb-1 text-sm font-semibold uppercase text-black">
@@ -243,7 +229,7 @@ export default function Example() {
 
             <div className="group flex flex-col h-full bg-white  shadow-sm rounded-xl">
               <div className="h-52 flex flex-col justify-center items-center bg-primary rounded-t-xl">
-                <Image src="/images/gasoline_fuel.png" alt="Fuels" width={300} height={300} />
+                <Image className="w-auto h-auto" src="/images/gasoline_fuel.png" alt="Fuels" width={300} height={300} />
               </div>
               <div className="p-4 md:p-6">
                 <span className="block mb-1 text-sm font-semibold uppercase text-dark">CB-AR Fuels</span>
@@ -349,7 +335,7 @@ export default function Example() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="bg-white">
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="max-w-2xl lg:max-w-5xl mx-auto">
             <div className="text-center">
@@ -524,8 +510,8 @@ export default function Example() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                           d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z"
                           fill="currentColor"
                         />
@@ -568,8 +554,8 @@ export default function Example() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                           d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z"
                           fill="currentColor"
                         />
@@ -766,8 +752,8 @@ export default function Example() {
                       id="flag-icon-css-us1"
                       viewBox="0 0 512 512"
                     >
-                      <g fill-rule="evenodd">
-                        <g stroke-width="1pt">
+                      <g fillRule="evenodd">
+                        <g strokeWidth="1pt">
                           <path
                             fill="#bd3d44"
                             d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
@@ -883,7 +869,7 @@ export default function Example() {
                         id="flag-icon-css-it"
                         viewBox="0 0 512 512"
                       >
-                        <g fill-rule="evenodd" stroke-width="1pt">
+                        <g fillRule="evenodd" strokeWidth="1pt">
                           <path fill="#fff" d="M0 0h512v512H0z" />
                           <path fill="#009246" d="M0 0h170.7v512H0z" />
                           <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
